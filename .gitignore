@@ -1,0 +1,19 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+frontend/dist/
+
+# Local database — contains password hashes and session tokens, never commit
+backend/app/dashboard.db
+
+# Environment variables / secrets
+.env
+*.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
