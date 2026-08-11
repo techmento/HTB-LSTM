@@ -16,7 +16,16 @@ export default function FaultDistribution({ data, loading, error }) {
       {!loading && !error && data && (
         <ResponsiveContainer width="100%" height={220}>
           <PieChart>
-            <Pie data={chartData} dataKey="value" nameKey="name" innerRadius={55} outerRadius={85} paddingAngle={2}>
+            <Pie
+              data={chartData}
+              dataKey="value"
+              nameKey="name"
+              innerRadius={55}
+              outerRadius={85}
+              paddingAngle={2}
+              label={({ percent }) => `${(percent * 100).toFixed(0)}%`}
+              labelLine={false}
+            >
               {chartData.map((entry) => (
                 <Cell key={entry.name} fill={COLORS[entry.name] || "#64748b"} />
               ))}

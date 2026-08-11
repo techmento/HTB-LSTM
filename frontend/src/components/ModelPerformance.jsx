@@ -13,7 +13,6 @@ const METRICS = [
   { key: "precision", label: "Precision" },
   { key: "recall", label: "Recall" },
   { key: "f1_score", label: "F1-Score" },
-  { key: "roc_auc", label: "ROC-AUC" },
 ];
 
 export default function ModelPerformance({ data, loading, error }) {
